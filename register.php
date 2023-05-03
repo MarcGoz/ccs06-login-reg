@@ -69,11 +69,7 @@
 		confirm_password.onkeyup = validatePassword;
 		</script>
 
-	<div>
-		<button>
-			Register User
-		</button>	
-	</div>
+
 </form>
 </body>
 </html>
