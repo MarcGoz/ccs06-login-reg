@@ -95,8 +95,11 @@ class User
 
 	public static function hashPassword($password)
 	{
-		$hash_pass = password_hash($password, PASSWORD_ARGON2I);
-		return $hash_pass;
+    $options = [
+        'cost' => 12,
+    ];
+    $hash_pass = password_hash($password, PASSWORD_BCRYPT, $options);
+    return $hash_pass;
 	}
 
 	public static function attemptLogin($email, $pass)

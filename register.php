@@ -9,48 +9,50 @@
 <h1>Register a User</h1>
 
 <form action="save-registration.php" method="POST">
-	<div>
-		<label>First Name</label>
-		<input type="text" name="first_name" placeholder="First Name" required/>	
+	<div class="form-group">
+		<label for="first_name">First Name*</label>
+		<input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name" required/>	
 	</div>
-	<div>
-		<label>Middle Name</label>
-		<input type="text" name="middle_name" placeholder="Middle Name" />	
+	<div class="form-group">
+		<label for="middle_name">Middle Name</label>
+		<input type="text" name="middle_name" id="middle_name" class="form-control" placeholder="Middle Name" />	
 	</div>
-	<div>
-		<label>Last Name</label>
-		<input type="text" name="last_name" placeholder="Last Name" required/>	
+	<div class="form-group">
+		<label for="last_name">Last Name*</label>
+		<input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name" required/>	
 	</div>
-	<div>
-		<label>Email Address</label>
-		<input type="email" name="email" placeholder="email@address.com" required/>	
+	<div class="form-group">
+		<label for="email">Email Address*</label>
+		<input type="email" name="email" id="email" class="form-control" placeholder="email@address.com" required/>	
 	</div>
-	<div>
-		<label>Password</label>
-		<input type="password" id="password"  name="password" minlength="8" required/>	
+	<div class="form-group">
+		<label for="password">Password*</label>
+		<input type="password" id="password" name="password" class="form-control" minlength="8" required/>	
 	</div>
-	<div>
-		<label>Confirm Password</label>
-		<input type="password" id="confirm_password" name="confirm_password" required/>	
+	<div class="form-group">
+		<label for="confirm_password">Confirm Password*</label>
+		<input type="password" id="confirm_password" name="confirm_password" class="form-control" required/>	
 	</div>
-	<div>
-	<div>
-		<label>Birthdate</label>
-		<input type="date" name="birthdate" placeholder="Birthdate" class = "bir_in" />	
+	<div class="form-group">
+		<label for="birthdate">Birthdate</label>
+		<input type="date" name="birthdate" id="birthdate" class="form-control" placeholder="Birthdate" />	
 	</div>
-	<div>
-		<label>Gender</label> <br />
-		<input type="radio" name="gender" value="male" />Male<br />
-		<input type="radio" name="gender" value="female" />Female<br />
+	<div class="form-group">
+		<label for="gender">Gender</label> <br />
+		<input type="radio" name="gender" id="male" value="male" /> <label for="male">Male</label><br />
+		<input type="radio" name="gender" id="female" value="female" /> <label for="female">Female</label><br />
+		<input type="radio" name="gender" id="other" value="other" /> <label for="other">Other</label><br />
 	</div>
-	<div>
-		<label>Address</label>
-		<input type="text" name="address" placeholder="Address" />	
+	<div class="form-group">
+		<label for="address">Address</label>
+		<textarea name="address" id="address" class="form-control" placeholder="Address"></textarea>	
 	</div>
-	<div>
-		<label>Contact Number</label>
-		<input type="text" name="contact_number" placeholder="Contact Number" />	
+	<div class="form-group">
+		<label for="contact_number">Contact Number</label>
+		<input type="text" name="contact_number" id="contact_number" class="form-control" placeholder="Contact Number" />	
 	</div>
+	<button type="submit" class="btn btn-primary">Register User</button>
+</form>
 
 	<script>
 		var password = document.getElementById("password")
